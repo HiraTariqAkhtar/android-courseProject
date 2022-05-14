@@ -1,4 +1,4 @@
-package com.ehb.cricket.ui.main
+package com.ehb.cricket.ui
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

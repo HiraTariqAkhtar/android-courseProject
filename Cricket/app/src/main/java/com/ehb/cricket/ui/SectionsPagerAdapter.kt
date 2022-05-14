@@ -1,4 +1,4 @@
-package com.ehb.cricket.ui.main
+package com.ehb.cricket.ui
 
 import android.content.Context
 import androidx.fragment.app.Fragment
