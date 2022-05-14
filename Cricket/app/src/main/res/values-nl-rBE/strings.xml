@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tab_1">Wedstrijden</string>
+    <string name="tab_2">Spelers</string>
+    <string name="tab_3">Landen</string>
+    <string name="current_matches">Huidige wedstrijden</string>
+    <string name="list_of_all_players">Lijst van alle spelers</string>
+    <string name="list_of_all_countries">Lijst van alle landen</string>
+</resources>
