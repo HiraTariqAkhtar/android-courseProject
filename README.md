@@ -15,3 +15,5 @@ https://stackoverflow.com/questions/53138172/how-to-implement-switch-case-statem
 https://www.codegrepper.com/code-examples/kotlin/findviewbyid+in+fragment+kotlin
 
 
+#### use retrofit
+https://www.youtube.com/watch?v=FiqiIJNALFs&ab_channel=DJMalone
