@@ -9,8 +9,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.ehb.cricket.R
 
 class CountryAdapter  : RecyclerView.Adapter<CountryAdapter.ViewHolder>() {
-    private var countryName = arrayOf("Pakistan", "India","Australia", "England","West Indies", "Pakistan", "India","Australia", "England","West Indies")
-    private var countryImage = arrayOf(R.drawable.pakistan, R.drawable.india, R.drawable.australia, R.drawable.england, R.drawable.west_indies, R.drawable.pakistan, R.drawable.india, R.drawable.australia, R.drawable.england, R.drawable.west_indies)
+    private var countryName = arrayOf("Pakistan", "India","Australia", "England","West Indies","Bangladesh", "Pakistan", "India","Australia", "England","West Indies", "Bangladesh")
+    private var countryImage = arrayOf(R.drawable.pakistan, R.drawable.india, R.drawable.australia, R.drawable.england, R.drawable.west_indies, R.drawable.bangladesh, R.drawable.pakistan, R.drawable.india, R.drawable.australia, R.drawable.england, R.drawable.west_indies, R.drawable.bangladesh)
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CountryAdapter.ViewHolder {
