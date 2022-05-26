@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlayerDetail">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/shadab"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="@string/shadab_khan" />
+
+    <TextView
+        android:id="@+id/country"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="10dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="@string/country" />
+
+    <TextView
+        android:id="@+id/countryName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/country"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="15dp"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:text="@string/pakistan" />
+
+    <TextView
+        android:id="@+id/dob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/country"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="@string/date_of_birth" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/dob"
+        app:layout_constraintTop_toBottomOf="@+id/countryName"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:text="@string/_4th_of_october_1998" />
+
+    <TextView
+        android:id="@+id/pob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dob"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="@string/place_of_birth" />
+
+    <TextView
+        android:id="@+id/place"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/pob"
+        app:layout_constraintTop_toBottomOf="@+id/date"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:text="@string/mianwali_pakistan" />
+
+    <TextView
+        android:id="@+id/role"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pob"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="@string/role" />
+
+    <TextView
+        android:id="@+id/roleInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/role"
+        app:layout_constraintTop_toBottomOf="@+id/place"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:text="@string/allrounder" />
+
+    <TextView
+        android:id="@+id/bowling"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/role"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="@string/bowling_style" />
+    <TextView
+        android:id="@+id/bowlingStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/bowling"
+        app:layout_constraintTop_toBottomOf="@+id/roleInfo"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:text="@string/right_arm_legbreak" />
+
+    <TextView
+        android:id="@+id/batting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bowling"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="@string/batting_style" />
+
+    <TextView
+        android:id="@+id/battingStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/batting"
+        app:layout_constraintTop_toBottomOf="@+id/bowlingStyle"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:text="@string/right_handed_bat" />
+
+    <Button
+        android:id="@+id/backBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/battingStyle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
