@@ -44,6 +44,9 @@ class Match : Fragment() {
         recyclerView.setHasFixedSize(true)
         recyclerView.layoutManager = layoutManager
 
+        adapter = MatchAdapter()
+        recyclerView.adapter = adapter
+/*
         // retrofit
 
         val retrofit = Retrofit.Builder()
@@ -66,7 +69,7 @@ class Match : Fragment() {
             override fun onFailure(call: Call<List<Matches>>, t: Throwable) {
                 d("match", t.toString())
             }
-        })
+        })*/
 
     }
 
