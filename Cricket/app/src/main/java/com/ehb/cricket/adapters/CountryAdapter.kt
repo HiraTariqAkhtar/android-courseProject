@@ -10,6 +10,7 @@ import com.ehb.cricket.R
 
 class CountryAdapter  : RecyclerView.Adapter<CountryAdapter.ViewHolder>() {
     private var countryName = arrayOf("Pakistan", "India","Australia", "England","West Indies","Bangladesh", "Pakistan", "India","Australia", "England","West Indies", "Bangladesh")
+    private var countryFlag = arrayOf(R.drawable.pak_flag, R.drawable.in_flag, R.drawable.aus_flag, R.drawable.eng_flag, R.drawable.wi_flag, R.drawable.ban_flag, R.drawable.pak_flag, R.drawable.in_flag, R.drawable.aus_flag, R.drawable.eng_flag, R.drawable.wi_flag, R.drawable.ban_flag)
     private var countryImage = arrayOf(R.drawable.pakistan, R.drawable.india, R.drawable.australia, R.drawable.england, R.drawable.west_indies, R.drawable.bangladesh, R.drawable.pakistan, R.drawable.india, R.drawable.australia, R.drawable.england, R.drawable.west_indies, R.drawable.bangladesh)
 
 
@@ -26,16 +27,20 @@ class CountryAdapter  : RecyclerView.Adapter<CountryAdapter.ViewHolder>() {
     override fun onBindViewHolder(holder: CountryAdapter.ViewHolder, position: Int) {
 
         holder.name.text = countryName[position]
-        holder.img.setImageResource(countryImage[position])
+        holder.name.textSize = 25F
+        holder.img1.setImageResource(countryFlag[position])
+        holder.img2.setImageResource(countryImage[position])
     }
 
 
     inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
-        var img : ImageView
+        var img1 : ImageView
+        var img2 : ImageView
         var name : TextView
 
         init {
-            img = itemView.findViewById(R.id.iv_img)
+            img1 = itemView.findViewById(R.id.iv_img)
+            img2 = itemView.findViewById(R.id.iv_img2)
             name = itemView.findViewById(R.id.tv_name)
         }
     }
