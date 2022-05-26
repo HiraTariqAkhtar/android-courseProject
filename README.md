@@ -17,6 +17,8 @@ https://www.codegrepper.com/code-examples/kotlin/findviewbyid+in+fragment+kotlin
 #### use retrofit
 https://www.youtube.com/watch?v=FiqiIJNALFs&ab_channel=DJMalone
 
+https://www.youtube.com/watch?v=seuRVttjQdM&ab_channel=CodingSTUFF
+
 #### show data in fragment
 https://www.youtube.com/watch?v=HGrFPWUCFNg&t=1139s&ab_channel=TheCodingShef  (explained in Hindi)
 

@@ -7,10 +7,12 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.ehb.cricket.R
+import com.ehb.cricket.classes.Matches
 
 class MatchAdapter : RecyclerView.Adapter<MatchAdapter.ViewHolder>() {
 
-    private var matchName = arrayOf("PAK vs IND", "PAK vs BAN","PAK vs AUS", "PAK vs ENG","PAK vs SA","PAK vs IND", "PAK vs BAN","PAK vs AUS", "PAK vs ENG","PAK vs SA")
+   // private var matchName = arrayOf("PAK vs IND", "PAK vs BAN","PAK vs AUS", "PAK vs ENG","PAK vs SA","PAK vs IND", "PAK vs BAN","PAK vs AUS", "PAK vs ENG","PAK vs SA")
+   lateinit var matchName: List<Matches>
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MatchAdapter.ViewHolder {
         val v = LayoutInflater.from(parent.context).inflate(R.layout.card_layout, parent, false)
@@ -23,7 +25,8 @@ class MatchAdapter : RecyclerView.Adapter<MatchAdapter.ViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: MatchAdapter.ViewHolder, position: Int) {
-        holder.name.text = matchName[position]
+
+        holder.name.text = matchName[position].name
         holder.img.setImageResource(R.drawable.cricket)
     }
 

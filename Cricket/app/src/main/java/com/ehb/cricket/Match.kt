@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.ehb.cricket.adapters.MatchAdapter
@@ -43,10 +44,6 @@ class Match : Fragment() {
         recyclerView.setHasFixedSize(true)
         recyclerView.layoutManager = layoutManager
 
-        adapter = MatchAdapter()
-        recyclerView.adapter = adapter
-
-
         // retrofit
 
         val retrofit = Retrofit.Builder()
@@ -57,11 +54,17 @@ class Match : Fragment() {
         val api = retrofit.create(MatchService::class.java)
         api.getMatches().enqueue(object: Callback<List<Matches>>{
             override fun onResponse(call: Call<List<Matches>>, response: Response<List<Matches>>) {
-                d("match", "onResponse")
+                if (!response.isSuccessful){
+                    d("match", response.code().toString())
+                    return
+                }
+                var matchList: List<Matches>? = response.body()
+                adapter = MatchAdapter()
+                recyclerView.adapter = adapter
             }
 
             override fun onFailure(call: Call<List<Matches>>, t: Throwable) {
-                d("match", "onFailure")
+                d("match", t.toString())
             }
         })
 
