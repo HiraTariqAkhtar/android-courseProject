@@ -10,10 +10,10 @@ import com.ehb.cricket.R
 
 class PlayerAdapter : RecyclerView.Adapter<PlayerAdapter.ViewHolder>() {
 
-    /*private var playerName = arrayOf("Shadab Khan", "Virat Kohli","Shadab Khan", "Virat Kohli","Shadab Khan", "Virat Kohli","Shadab Khan", "Virat Kohli","Shadab Khan", "Virat Kohli")
+    private var playerName = arrayOf("Shadab Khan", "Virat Kohli","Shadab Khan", "Virat Kohli","Shadab Khan", "Virat Kohli","Shadab Khan", "Virat Kohli","Shadab Khan", "Virat Kohli")
     private var playerCountry = arrayOf("Pakistan", "India","Pakistan", "India", "Pakistan", "India", "Pakistan", "India", "Pakistan", "India")
     private var playerImage = arrayOf(R.drawable.shadab, R.drawable.kohli, R.drawable.shadab, R.drawable.kohli,R.drawable.shadab, R.drawable.kohli,R.drawable.shadab, R.drawable.kohli,R.drawable.shadab, R.drawable.kohli)
-*/
+    private var playerTeamImage = arrayOf(R.drawable.pakistan, R.drawable.india, R.drawable.pakistan, R.drawable.india,R.drawable.pakistan, R.drawable.india,R.drawable.pakistan, R.drawable.india,R.drawable.pakistan, R.drawable.india)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PlayerAdapter.ViewHolder {
         val v = LayoutInflater.from(parent.context).inflate(R.layout.card_layout, parent, false)
@@ -22,20 +22,21 @@ class PlayerAdapter : RecyclerView.Adapter<PlayerAdapter.ViewHolder>() {
 
 
     override fun getItemCount(): Int {
-       // return playerName.size
-        return 10
+        return playerName.size
+    // return 10
     }
 
     override fun onBindViewHolder(holder: PlayerAdapter.ViewHolder, position: Int) {
 
-       /* holder.name.text = playerName[position]
+        holder.name.text = playerName[position]
         holder.info.text = playerCountry[position]
-        holder.img.setImageResource(playerImage[position])*/
+        holder.img.setImageResource(playerImage[position])
+        holder.img2.setImageResource(playerTeamImage[position])
 
-        holder.img.setImageResource(R.drawable.shadab)
+/*      holder.img.setImageResource(R.drawable.shadab)
         holder.img2.setImageResource(R.drawable.pakistan)
         holder.name.text = "Shadab Khan"
-        holder.info.text = "Pakistan"
+        holder.info.text = "Pakistan"*/
     }
 
 
