@@ -6,4 +6,13 @@
     <string name="current_matches">Huidige wedstrijden</string>
     <string name="list_of_all_players">Lijst van alle spelers</string>
     <string name="list_of_all_countries">Lijst van alle landen</string>
+    <string name="back">Terug</string>
+    <string name="_4th_of_october_1998">4 oktober 1994</string>
+    <string name="place_of_birth">Geboorteplaats:</string>
+    <string name="date_of_birth">Geboortedatum:</string>
+    <string name="country">Land:</string>
+    <string name="role">Rol:</string>
+    <string name="bowling_style">Bowling stijl:</string>
+    <string name="batting_style">Batting stijl:</string>
+    <string name="right_handed_bat">Rechtshandig</string>
 </resources>
