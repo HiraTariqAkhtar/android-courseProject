@@ -1,0 +1,47 @@
+package com.ehb.cricket.adapters
+
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
+import androidx.recyclerview.widget.RecyclerView
+import com.ehb.cricket.R
+
+class PlayerAdapter : RecyclerView.Adapter<PlayerAdapter.ViewHolder>() {
+
+    private var playerName = arrayOf("Shadab Khan", "Virat Kohli","Shadab Khan", "Virat Kohli","Shadab Khan", "Virat Kohli","Shadab Khan", "Virat Kohli","Shadab Khan", "Virat Kohli")
+    private var playerCountry = arrayOf("Pakistan", "India","Pakistan", "India", "Pakistan", "India", "Pakistan", "India", "Pakistan", "India")
+    private var playerImage = arrayOf(R.drawable.shadab, R.drawable.kohli, R.drawable.shadab, R.drawable.kohli,R.drawable.shadab, R.drawable.kohli,R.drawable.shadab, R.drawable.kohli,R.drawable.shadab, R.drawable.kohli)
+
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PlayerAdapter.ViewHolder {
+        val v = LayoutInflater.from(parent.context).inflate(R.layout.card_layout, parent, false)
+        return ViewHolder(v)
+    }
+
+
+    override fun getItemCount(): Int {
+        return playerName.size
+    }
+
+    override fun onBindViewHolder(holder: PlayerAdapter.ViewHolder, position: Int) {
+
+        holder.name.text = playerName[position]
+        holder.info.text = playerCountry[position]
+        holder.img.setImageResource(playerImage[position])
+    }
+
+
+    inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
+        var img : ImageView
+        var name : TextView
+        var info : TextView
+
+        init {
+            img = itemView.findViewById(R.id.iv_img)
+            name = itemView.findViewById(R.id.tv_name)
+            info = itemView.findViewById(R.id.tv_info)
+        }
+    }
+}
