@@ -40,9 +40,9 @@ class MatchAdapter : RecyclerView.Adapter<MatchAdapter.ViewHolder>() {
         var dateAndTime : TextView
 
         init {
-            img = itemView.findViewById(R.id.iv_match)
-            name = itemView.findViewById(R.id.tv_match)
-            dateAndTime = itemView.findViewById(R.id.tv_matchInfo)
+            img = itemView.findViewById(R.id.iv_img)
+            name = itemView.findViewById(R.id.tv_name)
+            dateAndTime = itemView.findViewById(R.id.tv_info)
         }
     }
 }
