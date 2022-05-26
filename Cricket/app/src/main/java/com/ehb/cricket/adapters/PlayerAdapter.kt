@@ -33,6 +33,7 @@ class PlayerAdapter : RecyclerView.Adapter<PlayerAdapter.ViewHolder>() {
         holder.img.setImageResource(playerImage[position])*/
 
         holder.img.setImageResource(R.drawable.shadab)
+        holder.img2.setImageResource(R.drawable.pakistan)
         holder.name.text = "Shadab Khan"
         holder.info.text = "Pakistan"
     }
@@ -40,11 +41,13 @@ class PlayerAdapter : RecyclerView.Adapter<PlayerAdapter.ViewHolder>() {
 
     inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         var img : ImageView
+        var img2 : ImageView
         var name : TextView
         var info : TextView
 
         init {
             img = itemView.findViewById(R.id.iv_img)
+            img2 = itemView.findViewById(R.id.iv_img2)
             name = itemView.findViewById(R.id.tv_name)
             info = itemView.findViewById(R.id.tv_info)
         }
