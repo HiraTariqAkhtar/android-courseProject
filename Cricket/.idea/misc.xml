@@ -6,6 +6,7 @@
         <entry key="app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.1055" />
         <entry key="app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.1055" />
         <entry key="app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.1055" />
+        <entry key="app/src/main/res/layout-land/activity_player_detail.xml" value="0.2808641975308642" />
         <entry key="app/src/main/res/layout/activity_bottom_nav.xml" value="0.16485507246376813" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.31567028985507245" />
         <entry key="app/src/main/res/layout/activity_player_detail.xml" value="0.16666666666666666" />
