@@ -3,13 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1815" />
         <entry key="app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.1055" />
         <entry key="app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.1055" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1815" />
         <entry key="app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.1055" />
-        <entry key="app/src/main/res/layout-land/activity_player_detail.xml" value="0.2808641975308642" />
+        <entry key="app/src/main/res/layout-land/activity_player_detail.xml" value="0.375" />
         <entry key="app/src/main/res/layout/activity_bottom_nav.xml" value="0.16485507246376813" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.31567028985507245" />
-        <entry key="app/src/main/res/layout/activity_player_detail.xml" value="0.16666666666666666" />
+        <entry key="app/src/main/res/layout/activity_player_detail.xml" value="0.335" />
         <entry key="app/src/main/res/layout/card_layout.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_country.xml" value="0.3049019764259593" />
         <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.16485507246376813" />
@@ -20,6 +22,7 @@
         <entry key="app/src/main/res/layout/fragment_player.xml" value="0.18009118541033434" />
         <entry key="app/src/main/res/layout/fragment_test.xml" value="0.17325227963525835" />
         <entry key="app/src/main/res/layout/row.xml" value="0.22826086956521738" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1815" />
       </map>
     </option>
   </component>
