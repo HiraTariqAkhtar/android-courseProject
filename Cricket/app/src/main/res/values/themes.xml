@@ -13,14 +13,7 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
-
-    <!-- Dialog popup -->
-    <style name="Dialog">
-        <item name="android:background">@color/white</item>
-    </style>
-
-
-
+    
     <style name="Theme.Cricket.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>

@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PlayerDetail">
+    tools:context=".PlayerDetail"
+    android:padding="25dp">
 
     <ImageView
         android:id="@+id/imageView"
@@ -186,6 +187,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/battingStyle" />
+        app:layout_constraintTop_toBottomOf="@+id/battingStyle"
+        android:layout_marginTop="25dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

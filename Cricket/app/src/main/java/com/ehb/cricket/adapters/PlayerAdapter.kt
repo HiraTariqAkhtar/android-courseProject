@@ -25,13 +25,14 @@ class PlayerAdapter : RecyclerView.Adapter<PlayerAdapter.ViewHolder>() {
         val v = LayoutInflater.from(parent.context).inflate(R.layout.card_layout, parent, false)
         val viewholder = ViewHolder(v)
 
-        val nextPage = Dialog(parent.context, R.style.Dialog)
+        val nextPage = Dialog(parent.context)
         nextPage.setContentView(R.layout.activity_player_detail)
 
 
         viewholder.player.setOnClickListener {
         //    d("player", "clicked" + viewholder.adapterPosition.toString())
             nextPage.show()
+
         }
         
         return viewholder
