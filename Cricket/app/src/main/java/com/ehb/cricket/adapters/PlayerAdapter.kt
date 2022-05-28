@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.ehb.cricket.PlayerDetail
 import com.ehb.cricket.R
@@ -21,6 +22,13 @@ class PlayerAdapter : RecyclerView.Adapter<PlayerAdapter.ViewHolder>() {
     private var playerImage = arrayOf(R.drawable.shadab, R.drawable.kohli, R.drawable.shadab, R.drawable.kohli,R.drawable.shadab, R.drawable.kohli,R.drawable.shadab, R.drawable.kohli,R.drawable.shadab, R.drawable.kohli)
     private var playerTeamImage = arrayOf(R.drawable.pakistan, R.drawable.india, R.drawable.pakistan, R.drawable.india,R.drawable.pakistan, R.drawable.india,R.drawable.pakistan, R.drawable.india,R.drawable.pakistan, R.drawable.india)
 
+    // player details
+    private var playerDOB = arrayOf("04-10-1998", "05-11-1988","04-10-1998", "05-11-1988","04-10-1998", "05-11-1988","04-10-1998", "05-11-1988","04-10-1998", "05-11-1988")
+    private var playerPOB = arrayOf("Mianwali, Pakistan", "Delhi, India","Mianwali, Pakistan", "Delhi, India","Mianwali, Pakistan", "Delhi, India","Mianwali, Pakistan", "Delhi, India","Mianwali, Pakistan", "Delhi, India")
+    private var playerRole = arrayOf("Allrounder", "Batsman","Allrounder", "Batsman","Allrounder", "Batsman","Allrounder", "Batsman","Allrounder", "Batsman")
+    private var playerBatStyle = arrayOf("Right handed bat", "Right handed bat","Right handed bat", "Right handed bat","Right handed bat", "Right handed bat","Right handed bat", "Right handed bat","Right handed bat", "Right handed bat")
+    private var playerBowlStyle = arrayOf("Right-arm legbreak", "Right-arm medium","Right-arm legbreak", "Right-arm medium","Right-arm legbreak", "Right-arm medium","Right-arm legbreak", "Right-arm medium","Right-arm legbreak", "Right-arm medium")
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PlayerAdapter.ViewHolder {
         val v = LayoutInflater.from(parent.context).inflate(R.layout.card_layout, parent, false)
         val viewholder = ViewHolder(v)
@@ -31,6 +39,27 @@ class PlayerAdapter : RecyclerView.Adapter<PlayerAdapter.ViewHolder>() {
 
         viewholder.player.setOnClickListener {
         //    d("player", "clicked" + viewholder.adapterPosition.toString())
+
+            val pic = nextPage.findViewById<ImageView>(R.id.imageView)
+            val namePlayer = nextPage.findViewById<TextView>(R.id.name)
+            val countryName = nextPage.findViewById<TextView>(R.id.countryName)
+            val date = nextPage.findViewById<TextView>(R.id.date)
+            val place = nextPage.findViewById<TextView>(R.id.place)
+            val roleInfo = nextPage.findViewById<TextView>(R.id.roleInfo)
+            val bowlingStyle = nextPage.findViewById<TextView>(R.id.bowlingStyle)
+            val battingStyle = nextPage.findViewById<TextView>(R.id.battingStyle)
+
+            // show correct details in dialog
+            pic.setImageResource(playerImage[viewholder.adapterPosition])
+            namePlayer.text = playerName[viewholder.adapterPosition]
+            countryName.text = playerCountry[viewholder.adapterPosition]
+            date.text = playerDOB[viewholder.adapterPosition]
+            place.text = playerPOB[viewholder.adapterPosition]
+            roleInfo.text = playerRole[viewholder.adapterPosition]
+            bowlingStyle.text = playerBowlStyle[viewholder.adapterPosition]
+            battingStyle.text = playerBatStyle[viewholder.adapterPosition]
+
+
             nextPage.show()
 
         }
