@@ -15,4 +15,5 @@
     <string name="bowling_style">Bowling stijl:</string>
     <string name="batting_style">Batting stijl:</string>
     <string name="right_handed_bat">Rechtshandig</string>
+    <string name="add_fav">Favorieten</string>
 </resources>

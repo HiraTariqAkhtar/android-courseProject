@@ -20,5 +20,6 @@
     <string name="right_arm_legbreak" translatable="false">Right-arm legbreak</string>
     <string name="right_handed_bat">Right handed bat</string>
     <string name="back">Back</string>
+    <string name="add_fav">Add to favourites</string>
 
 </resources>
