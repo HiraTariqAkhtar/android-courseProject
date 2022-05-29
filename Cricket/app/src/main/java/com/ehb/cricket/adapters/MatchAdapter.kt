@@ -16,6 +16,10 @@ class MatchAdapter : RecyclerView.Adapter<MatchAdapter.ViewHolder>() {
    private var imgTeam2 = arrayOf(R.drawable.india, R.drawable.bangladesh, R.drawable.pakistan, R.drawable.england,R.drawable.pakistan,R.drawable.india, R.drawable.bangladesh, R.drawable.pakistan, R.drawable.england,R.drawable.pakistan)
    private var matchDateAndTime = arrayOf("28-05-2022, 5PM", "28-05-2022, 5PM","28-05-2022, 5PM", "28-05-2022, 5PM","28-05-2022, 5PM","28-05-2022, 5PM", "28-05-2022, 5PM","28-05-2022, 5PM", "28-05-2022, 5PM","28-05-2022, 5PM")
 
+
+   private var matchType = arrayOf("ODI", "T20i","Test - Day 4", "ODI","ODI","ODI", "T20i","Test - Day 4", "ODI","ODI")
+   private var venue = arrayOf("Gadaffi stadium, Lahore", "Dubai International Cricket Stadium","Adelaide Oval, Australia", "Melbourne Cricket Ground","Gadaffi stadium, Lahore", "Dubai International Cricket Stadium","Adelaide Oval, Australia", "Melbourne Cricket Ground")
+
    // lateinit var matchName: List<Matches>
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MatchAdapter.ViewHolder {
