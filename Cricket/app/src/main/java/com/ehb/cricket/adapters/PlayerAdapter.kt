@@ -36,7 +36,7 @@ class PlayerAdapter : RecyclerView.Adapter<PlayerAdapter.ViewHolder>() {
         val v = LayoutInflater.from(parent.context).inflate(R.layout.card_layout, parent, false)
         val viewholder = ViewHolder(v)
 
-        val nextPage = Dialog(parent.context)
+        val nextPage = Dialog(parent.context, R.style.dialog)
         nextPage.setContentView(R.layout.activity_player_detail)
 
 
@@ -66,7 +66,7 @@ class PlayerAdapter : RecyclerView.Adapter<PlayerAdapter.ViewHolder>() {
 
             backbtn.setOnClickListener {
             //   Toast.makeText(parent.context, "button clicked!!", Toast.LENGTH_SHORT).show()
-                nextPage.cancel()
+                nextPage.dismiss()
             }
 
             nextPage.show()
