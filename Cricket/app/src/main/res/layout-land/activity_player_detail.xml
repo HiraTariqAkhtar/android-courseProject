@@ -10,24 +10,24 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="20dp"/>
 
     <TextView
         android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:textColor="@color/black"
-        android:textSize="25sp"
+        android:textSize="23sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/addToFav" />
 
     <TextView
         android:id="@+id/country"
@@ -35,11 +35,11 @@
         android:layout_height="wrap_content"
         android:text="@string/country"
         android:textColor="@color/black"
-        android:textSize="18sp"
+        android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/name"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="8dp"
         android:layout_marginStart="35dp"/>
 
 
@@ -48,10 +48,9 @@
         android:id="@+id/countryName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="12dp"
         android:textColor="@color/black"
-        android:textSize="15sp"
+        android:textSize="12sp"
         app:layout_constraintStart_toEndOf="@+id/country"
         app:layout_constraintTop_toBottomOf="@+id/name" />
 
@@ -61,11 +60,11 @@
         android:layout_height="wrap_content"
         android:text="@string/date_of_birth"
         android:textColor="@color/black"
-        android:textSize="18sp"
+        android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/country"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="8dp"
         android:layout_marginStart="35dp"/>
 
     <TextView
@@ -74,22 +73,22 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toEndOf="@+id/dob"
         app:layout_constraintTop_toBottomOf="@+id/countryName"
-        android:layout_marginTop="18dp"
-        android:layout_marginStart="10dp"
-        android:textSize="15sp"
+        android:layout_marginTop="12dp"
+        android:textSize="12sp"
         android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/pob"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="8dp"
         android:layout_marginStart="35dp"
         android:textColor="@color/black"
-        android:textSize="18sp"
+        android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/dob" />
+        app:layout_constraintTop_toBottomOf="@+id/dob"
+        android:text="@string/place_of_birth" />
 
     <TextView
         android:id="@+id/place"
@@ -97,9 +96,8 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toEndOf="@+id/pob"
         app:layout_constraintTop_toBottomOf="@+id/date"
-        android:layout_marginTop="18dp"
-        android:layout_marginStart="10dp"
-        android:textSize="15sp"
+        android:layout_marginTop="12dp"
+        android:textSize="12sp"
         android:textColor="@color/black"/>
 
     <TextView
@@ -108,9 +106,9 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/pob"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="8dp"
         android:layout_marginStart="35dp"
-        android:textSize="18sp"
+        android:textSize="15sp"
         android:textStyle="bold"
         android:textColor="@color/black"
         android:text="@string/role" />
@@ -121,9 +119,8 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toEndOf="@+id/role"
         app:layout_constraintTop_toBottomOf="@+id/place"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="10dp"
-        android:textSize="15sp"
+        android:layout_marginTop="12dp"
+        android:textSize="12sp"
         android:textColor="@color/black"/>
 
     <TextView
@@ -132,20 +129,20 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/role"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="8dp"
         android:layout_marginStart="35dp"
-        android:textSize="18sp"
+        android:textSize="15sp"
         android:textStyle="bold"
-        android:textColor="@color/black"/>
+        android:textColor="@color/black"
+        android:text="@string/bowling_style" />
     <TextView
         android:id="@+id/bowlingStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toEndOf="@+id/bowling"
         app:layout_constraintTop_toBottomOf="@+id/roleInfo"
-        android:layout_marginTop="18dp"
-        android:layout_marginStart="10dp"
-        android:textSize="15sp"
+        android:layout_marginTop="12dp"
+        android:textSize="12sp"
         android:textColor="@color/black"/>
 
     <TextView
@@ -154,9 +151,9 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/bowling"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="8dp"
         android:layout_marginStart="35dp"
-        android:textSize="18sp"
+        android:textSize="15sp"
         android:textStyle="bold"
         android:textColor="@color/black"
         android:text="@string/batting_style" />
@@ -167,9 +164,8 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toEndOf="@+id/batting"
         app:layout_constraintTop_toBottomOf="@+id/bowlingStyle"
-        android:layout_marginTop="18dp"
-        android:layout_marginStart="10dp"
-        android:textSize="15sp"
+        android:layout_marginTop="12dp"
+        android:textSize="12sp"
         android:textColor="@color/black"/>
 
     <Button
@@ -180,6 +176,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="5dp"/>
+
+    <Button
+        android:id="@+id/addToFav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/add_fav"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
