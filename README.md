@@ -30,3 +30,5 @@ https://www.youtube.com/watch?v=Zd0TUuoPP-s&ab_channel=AwsRh
 #### change background of dialog
 https://stackoverflow.com/questions/18346920/change-the-background-color-of-a-pop-up-dialog
 
+#### cancel dialog on click of back btn
+https://developer.android.com/guide/topics/ui/dialogs#DismissingADialog

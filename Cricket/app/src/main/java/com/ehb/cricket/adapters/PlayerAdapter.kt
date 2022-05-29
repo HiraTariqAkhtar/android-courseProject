@@ -7,11 +7,14 @@ import android.util.Log.d
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.cardview.widget.CardView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
+import com.ehb.cricket.Player
 import com.ehb.cricket.PlayerDetail
 import com.ehb.cricket.R
 
@@ -49,6 +52,8 @@ class PlayerAdapter : RecyclerView.Adapter<PlayerAdapter.ViewHolder>() {
             val bowlingStyle = nextPage.findViewById<TextView>(R.id.bowlingStyle)
             val battingStyle = nextPage.findViewById<TextView>(R.id.battingStyle)
 
+            val backbtn = nextPage.findViewById<Button>(R.id.backBtn)
+
             // show correct details in dialog
             pic.setImageResource(playerImage[viewholder.adapterPosition])
             namePlayer.text = playerName[viewholder.adapterPosition]
@@ -59,11 +64,14 @@ class PlayerAdapter : RecyclerView.Adapter<PlayerAdapter.ViewHolder>() {
             bowlingStyle.text = playerBowlStyle[viewholder.adapterPosition]
             battingStyle.text = playerBatStyle[viewholder.adapterPosition]
 
+            backbtn.setOnClickListener {
+            //   Toast.makeText(parent.context, "button clicked!!", Toast.LENGTH_SHORT).show()
+                nextPage.cancel()
+            }
 
             nextPage.show()
-
         }
-        
+
         return viewholder
     }
 
