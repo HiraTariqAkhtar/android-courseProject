@@ -21,4 +21,5 @@
     <string name="venue">Locatie:</string>
     <string name="captain">Groepsleiders</string>
     <string name="first_matches">Eerste wedstrijden</string>
+    <string name="already_in_fav">U bevindt zich al in de favorieten pagina</string>
 </resources>
