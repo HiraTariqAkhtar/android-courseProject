@@ -128,6 +128,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/first_match"
         android:layout_marginTop="12dp"
+        android:layout_marginStart="10dp"
         android:textSize="15sp"
         android:textStyle="bold"
         android:textColor="@color/black"
@@ -140,7 +141,6 @@
         app:layout_constraintStart_toEndOf="@+id/firstTest"
         app:layout_constraintTop_toBottomOf="@+id/first_match"
         android:layout_marginTop="12dp"
-        android:layout_marginStart="10dp"
         android:textSize="15sp"
         android:textColor="@color/black"/>
 
