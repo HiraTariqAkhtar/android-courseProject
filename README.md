@@ -35,3 +35,22 @@ https://developer.android.com/guide/topics/ui/dialogs#DismissingADialog
 
 #### create custom action bar
 https://www.youtube.com/watch?v=DOd6E6azS5I
+
+#### details
+##### Players
+Shadab Khan: https://api.cricapi.com/v1/players_info?apikey=3b88eab0-c4f9-4b55-b32b-e5b79df72e71&offset=0&id=26c7e157-99e8-46b3-9675-5350e8e79270
+
+Virat Kohli: https://www.cricbuzz.com/profiles/1413/virat-kohli
+
+##### Country national teams
+Pakistan national cricket team: https://en.wikipedia.org/wiki/Pakistan_national_cricket_team
+
+Indian national cricket team: https://en.wikipedia.org/wiki/India_national_cricket_team
+
+Australia national cricket team: https://en.wikipedia.org/wiki/Australia_national_cricket_team
+
+England national cricket team: https://en.wikipedia.org/wiki/England_cricket_team
+
+West-Indies national cricket team: https://en.wikipedia.org/wiki/West_Indies_cricket_team
+
+Bangladesh national cricket team: https://en.wikipedia.org/wiki/Bangladesh_national_cricket_team
