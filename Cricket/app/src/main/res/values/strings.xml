@@ -21,5 +21,11 @@
     <string name="right_handed_bat">Right handed bat</string>
     <string name="back">Back</string>
     <string name="add_fav">Add to favourites</string>
+    <string name="favourites">Favourites</string>
+    <string name="type_match" translatable="false">Type match:</string>
+    <string name="date_and_time">Date and time:</string>
+    <string name="venue">Venue:</string>
+    <string name="logo_team_1" translatable="false">Logo team 1</string>
+    <string name="logo_team_2" translatable="false">Logo team 2</string>
 
 </resources>
