@@ -14,9 +14,11 @@ import android.widget.Toast
 import androidx.cardview.widget.CardView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
+import com.ehb.cricket.Favourites
 import com.ehb.cricket.Player
 import com.ehb.cricket.PlayerDetail
 import com.ehb.cricket.R
+import com.ehb.cricket.classes.Players
 
 class PlayerAdapter : RecyclerView.Adapter<PlayerAdapter.ViewHolder>() {
 
@@ -53,6 +55,8 @@ class PlayerAdapter : RecyclerView.Adapter<PlayerAdapter.ViewHolder>() {
             val battingStyle = nextPage.findViewById<TextView>(R.id.battingStyle)
 
             val backbtn = nextPage.findViewById<Button>(R.id.backBtn)
+            val favbtn = nextPage.findViewById<Button>(R.id.addToFav)
+            val favPage = Favourites()
 
             // show correct details in dialog
             pic.setImageResource(playerImage[viewholder.adapterPosition])
@@ -67,6 +71,13 @@ class PlayerAdapter : RecyclerView.Adapter<PlayerAdapter.ViewHolder>() {
             backbtn.setOnClickListener {
             //   Toast.makeText(parent.context, "button clicked!!", Toast.LENGTH_SHORT).show()
                 nextPage.dismiss()
+            }
+
+            favbtn.setOnClickListener {
+                val addedPlayer = Players(playerName[viewholder.adapterPosition], playerImage[viewholder.adapterPosition])
+                favPage.playerList.add(addedPlayer)
+
+            //  Toast.makeText(parent.context, favPage.playerList.toString(), Toast.LENGTH_SHORT).show()
             }
 
             nextPage.show()
