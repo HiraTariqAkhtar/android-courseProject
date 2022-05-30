@@ -80,7 +80,6 @@
         app:layout_constraintStart_toEndOf="@+id/captainTest"
         app:layout_constraintTop_toBottomOf="@+id/captain"
         android:layout_marginTop="20dp"
-        android:layout_marginStart="10dp"
         android:textSize="15sp"
         android:textColor="@color/black" />
 
@@ -105,7 +104,6 @@
         app:layout_constraintStart_toEndOf="@+id/captainODI"
         app:layout_constraintTop_toBottomOf="@+id/captainTest"
         android:layout_marginTop="12dp"
-        android:layout_marginStart="10dp"
         android:textSize="15sp"
         android:textColor="@color/black"/>
 
@@ -129,7 +127,6 @@
         app:layout_constraintStart_toEndOf="@+id/captainT20"
         app:layout_constraintTop_toBottomOf="@+id/captainODI"
         android:layout_marginTop="12dp"
-        android:layout_marginStart="10dp"
         android:textSize="15sp"
         android:textColor="@color/black" />
 
@@ -153,7 +150,6 @@
         app:layout_constraintStart_toEndOf="@+id/firstTest"
         app:layout_constraintTop_toBottomOf="@+id/first_match"
         android:layout_marginTop="20dp"
-        android:layout_marginStart="10dp"
         android:textSize="15sp"
         android:textColor="@color/black"/>
 
@@ -177,7 +173,6 @@
         app:layout_constraintStart_toEndOf="@+id/firstODI"
         app:layout_constraintTop_toBottomOf="@+id/firstTest"
         android:layout_marginTop="12dp"
-        android:layout_marginStart="10dp"
         android:textSize="15sp"
         android:textColor="@color/black"/>
 
@@ -201,7 +196,6 @@
         app:layout_constraintStart_toEndOf="@+id/firstT20"
         app:layout_constraintTop_toBottomOf="@+id/firstODI"
         android:layout_marginTop="12dp"
-        android:layout_marginStart="10dp"
         android:textSize="15sp"
         android:textColor="@color/black"/>
 
