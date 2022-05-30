@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlayerDetail">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <ImageView
+        android:id="@+id/team1"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/logo_team_1" />
+
+    <ImageView
+        android:id="@+id/team2"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/logo_team_2" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/team1"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/dateTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="10dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="@string/date_and_time" />
+
+    <TextView
+        android:id="@+id/dateAndTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/dateTime"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        android:layout_marginTop="25dp"
+        android:textSize="15sp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateTime"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="@string/type_match" />
+
+    <TextView
+        android:id="@+id/matchType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/type"
+        app:layout_constraintTop_toBottomOf="@+id/dateAndTime"
+        android:layout_marginTop="10dp"
+        android:textSize="15sp"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/venue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/type"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="@string/venue" />
+
+    <TextView
+        android:id="@+id/venueName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/type"
+        app:layout_constraintTop_toBottomOf="@+id/matchType"
+        android:layout_marginTop="10dp"
+        android:textSize="15sp"
+        android:textColor="@color/black" />
+
+
+    <Button
+        android:id="@+id/backBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addToFav"
+        android:layout_marginTop="15dp"/>
+
+    <Button
+        android:id="@+id/addToFav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="10dp"
+        android:text="@string/add_fav"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
