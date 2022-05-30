@@ -19,4 +19,6 @@
     <string name="favourites">Favorieten</string>
     <string name="date_and_time">Tijd en datum:</string>
     <string name="venue">Locatie:</string>
+    <string name="captain">Groepsleiders</string>
+    <string name="first_matches">Eerste wedstrijden</string>
 </resources>
