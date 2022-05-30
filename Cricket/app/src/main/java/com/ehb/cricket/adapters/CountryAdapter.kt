@@ -1,12 +1,18 @@
 package com.ehb.cricket.adapters
 
+import android.app.Dialog
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
+import com.ehb.cricket.Favourites
 import com.ehb.cricket.R
+import com.ehb.cricket.classes.Countries
+import com.ehb.cricket.classes.Players
 
 class CountryAdapter  : RecyclerView.Adapter<CountryAdapter.ViewHolder>() {
     private var countryName = arrayOf("Pakistan", "India","Australia", "England","West Indies","Bangladesh")
@@ -19,7 +25,7 @@ class CountryAdapter  : RecyclerView.Adapter<CountryAdapter.ViewHolder>() {
     private var captainODI = arrayOf("Babar Azam", "Rohit Sharma","Aaron Finch", "Eoin Morgan","Nicholas Pooran","Tamim Iqbal")
     private var captainT20 = arrayOf("Babar Azam", "Rohit Sharma","Aaron Finch", "Eoin Morgan","Nicholas Pooran","Mahmudullah")
 
-    private var first_est = arrayOf("vs India: 16-18/10/1952", "vs England: 25-28/06/1932", "vs England: 15-19/03/1877", "vs Australia: 15-19/03/1877", "vs England: 23-26/06/1928", "vs India: 10-13/11/2000")
+    private var first_test = arrayOf("vs India: 16-18/10/1952", "vs England: 25-28/06/1932", "vs England: 15-19/03/1877", "vs Australia: 15-19/03/1877", "vs England: 23-26/06/1928", "vs India: 10-13/11/2000")
     private var first_odi = arrayOf("vs New-Zealand: 11/02/1973", "vs England: 13/07/1974", "vs England: 05/01/1971", "vs Australia: 05/01/1971", "vs England: 05/09/1973", "vs Pakistan: 31/03/1986")
     private var first_t20 = arrayOf("vs England: 28/08/2006", "vs South Africa: 01/12/2006", "vs New-Zealand: 17/02/2005", "vs Australia: 05/01/1971", "vs New-Zealand: 16/02/2006", "vs Zimbabwe: 28/11/2006")
 
@@ -27,7 +33,48 @@ class CountryAdapter  : RecyclerView.Adapter<CountryAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CountryAdapter.ViewHolder {
         val v = LayoutInflater.from(parent.context).inflate(R.layout.card_layout, parent, false)
-        return ViewHolder(v)
+        val vh = ViewHolder(v)
+
+        val details = Dialog(parent.context, R.style.dialog)
+        details.setContentView(R.layout.activity_country_detail)
+
+        vh.country.setOnClickListener {
+
+            val teamImg = details.findViewById<ImageView>(R.id.teamImg)
+            val country_name = details.findViewById<TextView>(R.id.name)
+            val test_captain = details.findViewById<TextView>(R.id.captainTestName)
+            val odi_captain = details.findViewById<TextView>(R.id.captainODIName)
+            val t20_captain = details.findViewById<TextView>(R.id.captainT20Name)
+            val first_test_match = details.findViewById<TextView>(R.id.firstTestMatch)
+            val first_odi_match = details.findViewById<TextView>(R.id.firstODIMatch)
+            val first_t20_match = details.findViewById<TextView>(R.id.firstT20Match)
+
+            val backbtn = details.findViewById<Button>(R.id.backBtn)
+            val favbtn = details.findViewById<Button>(R.id.addToFav)
+            val favPage = Favourites()
+
+            teamImg.setImageResource(countryImage[vh.adapterPosition])
+            country_name.text = countryName[vh.adapterPosition]
+            test_captain.text = captainTest[vh.adapterPosition]
+            odi_captain.text = captainODI[vh.adapterPosition]
+            t20_captain.text = captainT20[vh.adapterPosition]
+            first_test_match.text = first_test[vh.adapterPosition]
+            first_odi_match.text = first_odi[vh.adapterPosition]
+            first_t20_match.text = first_t20[vh.adapterPosition]
+
+            backbtn.setOnClickListener {
+                details.dismiss()
+            }
+
+            favbtn.setOnClickListener {
+                val addedCountry = Countries(countryName[vh.adapterPosition], countryImage[vh.adapterPosition])
+                favPage.countryList.add(addedCountry)
+            }
+
+            details.show()
+        }
+
+        return vh
     }
 
 
@@ -48,11 +95,13 @@ class CountryAdapter  : RecyclerView.Adapter<CountryAdapter.ViewHolder>() {
         var img1 : ImageView
         var img2 : ImageView
         var name : TextView
+        val country : CardView
 
         init {
             img1 = itemView.findViewById(R.id.iv_img)
             img2 = itemView.findViewById(R.id.iv_img2)
             name = itemView.findViewById(R.id.tv_name)
+            country = itemView.findViewById(R.id.card_view)
         }
     }
 }
