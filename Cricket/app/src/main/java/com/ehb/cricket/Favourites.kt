@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
+import android.widget.Toast
 import com.ehb.cricket.classes.Countries
 import com.ehb.cricket.classes.Matches
 import com.ehb.cricket.classes.Players
@@ -20,8 +21,7 @@ class Favourites : AppCompatActivity() {
 
         val favIcon = findViewById<ImageView>(R.id.FavIcon)
         favIcon.setOnClickListener {
-            val intent = Intent(this, Favourites::class.java)
-            startActivity(intent)
+            Toast.makeText(this, getString(R.string.already_in_fav), Toast.LENGTH_SHORT).show()
         }
 
         val backIcon = findViewById<ImageView>(R.id.backIcon)
