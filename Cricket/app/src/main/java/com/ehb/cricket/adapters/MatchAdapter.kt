@@ -33,7 +33,7 @@ class MatchAdapter : RecyclerView.Adapter<MatchAdapter.ViewHolder>() {
         val detailPage =Dialog(parent.context, R.style.dialog)
         detailPage.setContentView(R.layout.activity_match_detail)
 
-        viewholder.player.setOnClickListener {
+        viewholder.match.setOnClickListener {
             val team1 = detailPage.findViewById<ImageView>(R.id.team1)
             val team2 = detailPage.findViewById<ImageView>(R.id.team2)
             val teams = detailPage.findViewById<TextView>(R.id.name)
@@ -87,14 +87,14 @@ class MatchAdapter : RecyclerView.Adapter<MatchAdapter.ViewHolder>() {
         var img2 : ImageView
         var name : TextView
         var dateAndTime : TextView
-        val player : CardView
+        val match : CardView
 
         init {
             img1 = itemView.findViewById(R.id.iv_img)
             img2 = itemView.findViewById(R.id.iv_img2)
             name = itemView.findViewById(R.id.tv_name)
             dateAndTime = itemView.findViewById(R.id.tv_info)
-            player = itemView.findViewById(R.id.card_view)
+            match = itemView.findViewById(R.id.card_view)
         }
     }
 }
