@@ -32,3 +32,6 @@ https://stackoverflow.com/questions/18346920/change-the-background-color-of-a-po
 
 #### cancel dialog on click of back btn
 https://developer.android.com/guide/topics/ui/dialogs#DismissingADialog
+
+#### create custom action bar
+https://www.youtube.com/watch?v=DOd6E6azS5I
