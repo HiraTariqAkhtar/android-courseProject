@@ -1,6 +1,8 @@
 package com.ehb.cricket
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.ImageView
 import com.google.android.material.tabs.TabLayout
 import androidx.viewpager.widget.ViewPager
 import androidx.appcompat.app.AppCompatActivity
@@ -22,6 +24,12 @@ class MainActivity : AppCompatActivity() {
         viewPager.adapter = sectionsPagerAdapter
         val tabs: TabLayout = binding.tabs
         tabs.setupWithViewPager(viewPager)
+
+        val favIcon = findViewById<ImageView>(R.id.FavIcon)
+        favIcon.setOnClickListener {
+            val intent = Intent(this, Favourites::class.java)
+            startActivity(intent)
+        }
 
     }
 }
