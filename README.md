@@ -36,6 +36,9 @@ https://developer.android.com/guide/topics/ui/dialogs#DismissingADialog
 #### create custom action bar
 https://www.youtube.com/watch?v=DOd6E6azS5I
 
+#### fill recyclerView in Activity
+https://www.geeksforgeeks.org/android-recyclerview-in-kotlin/#:~:text=Go%20to%20app%20%3E%20java%20%3E%20package,to%20show%20in%20your%20RecyclerView.
+
 #### details
 ##### Players
 Shadab Khan: https://api.cricapi.com/v1/players_info?apikey=3b88eab0-c4f9-4b55-b32b-e5b79df72e71&offset=0&id=26c7e157-99e8-46b3-9675-5350e8e79270
