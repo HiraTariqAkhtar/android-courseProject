@@ -26,17 +26,17 @@ import com.ehb.cricket.classes.Players
 class PlayerAdapter : RecyclerView.Adapter<PlayerAdapter.ViewHolder>() {
     val fav_player_list = arrayListOf<Players>(Players("Shadab Khan", R.drawable.shadab, R.drawable.pakistan))
 
-    private var playerName = arrayOf("Shadab Khan", "Virat Kohli","Shadab Khan", "Virat Kohli","Shadab Khan", "Virat Kohli","Shadab Khan", "Virat Kohli","Shadab Khan", "Virat Kohli")
-    private var playerCountry = arrayOf("Pakistan", "India","Pakistan", "India", "Pakistan", "India", "Pakistan", "India", "Pakistan", "India")
-    private var playerImage = arrayOf(R.drawable.shadab, R.drawable.kohli, R.drawable.shadab, R.drawable.kohli,R.drawable.shadab, R.drawable.kohli,R.drawable.shadab, R.drawable.kohli,R.drawable.shadab, R.drawable.kohli)
-    private var playerTeamImage = arrayOf(R.drawable.pakistan, R.drawable.india, R.drawable.pakistan, R.drawable.india,R.drawable.pakistan, R.drawable.india,R.drawable.pakistan, R.drawable.india,R.drawable.pakistan, R.drawable.india)
+    private var playerName = arrayOf("Shadab Khan", "Virat Kohli","Ben Stokes", "Babar Azam","Tamim Iqbal", "Aaron Finch", "Shaheen Shah Afridi")
+    private var playerCountry = arrayOf("Pakistan", "India","England", "Pakistan", "Bangladesh", "Australia", "Pakistan")
+    private var playerImage = arrayOf(R.drawable.shadab, R.drawable.kohli, R.drawable.ben, R.drawable.babar,R.drawable.tamim, R.drawable.aaron, R.drawable.shaheen)
+    private var playerTeamImage = arrayOf(R.drawable.pakistan, R.drawable.india,R.drawable.england , R.drawable.pakistan,R.drawable.bangladesh, R.drawable.australia, R.drawable.pakistan)
 
     // player details
-    private var playerDOB = arrayOf("04-10-1998", "05-11-1988","04-10-1998", "05-11-1988","04-10-1998", "05-11-1988","04-10-1998", "05-11-1988","04-10-1998", "05-11-1988")
-    private var playerPOB = arrayOf("Mianwali, Pakistan", "Delhi, India","Mianwali, Pakistan", "Delhi, India","Mianwali, Pakistan", "Delhi, India","Mianwali, Pakistan", "Delhi, India","Mianwali, Pakistan", "Delhi, India")
-    private var playerRole = arrayOf("Allrounder", "Batsman","Allrounder", "Batsman","Allrounder", "Batsman","Allrounder", "Batsman","Allrounder", "Batsman")
-    private var playerBatStyle = arrayOf("Right handed bat", "Right handed bat","Right handed bat", "Right handed bat","Right handed bat", "Right handed bat","Right handed bat", "Right handed bat","Right handed bat", "Right handed bat")
-    private var playerBowlStyle = arrayOf("Right-arm legbreak", "Right-arm medium","Right-arm legbreak", "Right-arm medium","Right-arm legbreak", "Right-arm medium","Right-arm legbreak", "Right-arm medium","Right-arm legbreak", "Right-arm medium")
+    private var playerDOB = arrayOf("04-10-1998", "05-11-1988","04-06-1991", "15-10-1994","20-03-1989", "17-11-1986", "06-04-2000")
+    private var playerPOB = arrayOf("Mianwali, Pakistan", "Delhi, India","Canterbury, New-Zealand", "Lahore, Pakistan","Chittagong, Bangladesh", "Colac, Australia", "Khyber Agency, Pakistan")
+    private var playerRole = arrayOf("Allrounder", "Batsman","Allrounder", "Batsman","Batsman", "Batsman", "Bowler")
+    private var playerBatStyle = arrayOf("Right handed bat", "Right handed bat","Left handed bat", "Right handed bat","Left handed bat", "Right handed bat", "Left handed bat")
+    private var playerBowlStyle = arrayOf("Right-arm legbreak", "Right-arm medium","Right-arm fast-medium", "Right-arm offbreak","/", "Left-arm orthodox", "Left-arm fast-medium")
 
     @SuppressLint("Range")
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PlayerAdapter.ViewHolder {

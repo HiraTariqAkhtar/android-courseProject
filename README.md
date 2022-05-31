@@ -45,6 +45,12 @@ Shadab Khan: https://api.cricapi.com/v1/players_info?apikey=3b88eab0-c4f9-4b55-b
 
 Virat Kohli: https://www.cricbuzz.com/profiles/1413/virat-kohli
 
+Babar Azam: https://www.cricbuzz.com/profiles/8359/babar-azam
+
+Ben Stokes: https://www.cricbuzz.com/profiles/6557/ben-stokes
+
+Tamim Iqbal: https://www.cricbuzz.com/profiles/612/tamim-iqbal
+
 ##### Country national teams
 Pakistan national cricket team: https://en.wikipedia.org/wiki/Pakistan_national_cricket_team
 
