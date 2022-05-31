@@ -61,7 +61,7 @@ class MatchAdapter : RecyclerView.Adapter<MatchAdapter.ViewHolder>() {
             }
 
             favbtn.setOnClickListener {
-                val addMatch = Matches(matchName[viewholder.adapterPosition],matchType[viewholder.adapterPosition],matchDateAndTime[viewholder.adapterPosition], venue[viewholder.adapterPosition])
+                val addMatch = Matches(matchName[viewholder.adapterPosition])
                 favPage.matchList.add(addMatch)
 
                 favbtn.visibility = View.GONE
@@ -71,7 +71,7 @@ class MatchAdapter : RecyclerView.Adapter<MatchAdapter.ViewHolder>() {
             }
 
             removeFav.setOnClickListener {
-                val removeMatch = Matches(matchName[viewholder.adapterPosition],matchType[viewholder.adapterPosition],matchDateAndTime[viewholder.adapterPosition], venue[viewholder.adapterPosition])
+                val removeMatch = Matches(matchName[viewholder.adapterPosition])
                 favPage.matchList.remove(removeMatch)
 
                 removeFav.visibility = View.GONE

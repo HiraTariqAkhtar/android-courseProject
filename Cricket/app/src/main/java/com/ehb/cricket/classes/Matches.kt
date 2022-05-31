@@ -1,9 +1,9 @@
 package com.ehb.cricket.classes
 
+import com.ehb.cricket.R
+
 data class Matches (
     val name: String,
-    val matchType: String,
-    val dateTime: String,
-    val venue: String
+    val img: Int = R.drawable.cricket
 
 )
