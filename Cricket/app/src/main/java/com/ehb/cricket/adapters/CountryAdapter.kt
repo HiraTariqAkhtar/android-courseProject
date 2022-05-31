@@ -17,7 +17,7 @@ import com.ehb.cricket.classes.Matches
 import com.ehb.cricket.classes.Players
 
 class CountryAdapter  : RecyclerView.Adapter<CountryAdapter.ViewHolder>() {
-    val fav_country_list = arrayListOf<Countries>()
+    val fav_country_list = arrayListOf<Countries>(Countries("Pakistan", R.drawable.pak_flag, R.drawable.pakistan), Countries("Australia", R.drawable.aus_flag, R.drawable.australia), Countries("India", R.drawable.in_flag, R.drawable.india))
 
     private var countryName = arrayOf("Pakistan", "India","Australia", "England","West Indies","Bangladesh")
     private var countryFlag = arrayOf(R.drawable.pak_flag, R.drawable.in_flag, R.drawable.aus_flag, R.drawable.eng_flag, R.drawable.wi_flag, R.drawable.ban_flag)
@@ -72,7 +72,7 @@ class CountryAdapter  : RecyclerView.Adapter<CountryAdapter.ViewHolder>() {
             }
 
             favbtn.setOnClickListener {
-                val addedCountry = Countries(countryName[vh.adapterPosition], countryImage[vh.adapterPosition])
+                val addedCountry = Countries(countryName[vh.adapterPosition], countryImage[vh.adapterPosition], countryFlag[vh.adapterPosition])
                 fav_country_list.add(addedCountry)
 
                 favbtn.visibility = View.GONE
@@ -81,7 +81,7 @@ class CountryAdapter  : RecyclerView.Adapter<CountryAdapter.ViewHolder>() {
             }
 
             removeFav.setOnClickListener {
-                val removedCountry = Countries(countryName[vh.adapterPosition], countryImage[vh.adapterPosition])
+                val removedCountry = Countries(countryName[vh.adapterPosition], countryImage[vh.adapterPosition], countryFlag[vh.adapterPosition])
 
                 removeFav.visibility = View.GONE
                 favbtn.visibility = View.VISIBLE

@@ -17,7 +17,7 @@ import com.ehb.cricket.classes.Matches
 import com.ehb.cricket.classes.Players
 
 class MatchAdapter : RecyclerView.Adapter<MatchAdapter.ViewHolder>() {
-    val fav_match_list = arrayListOf<Matches>(Matches("gug", R.drawable.cricket, R.drawable.india), Matches("azertyu", R.drawable.shadab, R.drawable.pakistan))
+    val fav_match_list = arrayListOf<Matches>(Matches("PAK vs IND", R.drawable.pakistan, R.drawable.india), Matches("PAK vs BAN", R.drawable.pakistan, R.drawable.bangladesh))
 
    private var matchName = arrayOf("PAK vs IND", "PAK vs BAN","AUS vs PAK", "PAK vs ENG","WI vs PAK","PAK vs IND", "PAK vs BAN","AUS vs PAK", "PAK vs ENG","WI vs PAK")
    private var imgTeam1 = arrayOf(R.drawable.pakistan, R.drawable.pakistan, R.drawable.australia, R.drawable.pakistan,R.drawable.west_indies,R.drawable.pakistan, R.drawable.pakistan, R.drawable.australia, R.drawable.pakistan,R.drawable.west_indies)

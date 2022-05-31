@@ -22,6 +22,7 @@ import com.ehb.cricket.classes.Matches
 import com.ehb.cricket.classes.Players
 
 class PlayerAdapter : RecyclerView.Adapter<PlayerAdapter.ViewHolder>() {
+    val fav_player_list = arrayListOf<Players>(Players("Shadab Khan", R.drawable.shadab, R.drawable.pakistan))
 
     private var playerName = arrayOf("Shadab Khan", "Virat Kohli","Shadab Khan", "Virat Kohli","Shadab Khan", "Virat Kohli","Shadab Khan", "Virat Kohli","Shadab Khan", "Virat Kohli")
     private var playerCountry = arrayOf("Pakistan", "India","Pakistan", "India", "Pakistan", "India", "Pakistan", "India", "Pakistan", "India")
@@ -76,7 +77,7 @@ class PlayerAdapter : RecyclerView.Adapter<PlayerAdapter.ViewHolder>() {
             }
 
             favbtn.setOnClickListener {
-                val addedPlayer = Players(playerName[viewholder.adapterPosition], playerImage[viewholder.adapterPosition])
+                val addedPlayer = Players(playerName[viewholder.adapterPosition], playerImage[viewholder.adapterPosition], playerTeamImage[viewholder.adapterPosition])
 
                 favbtn.visibility = View.GONE
                 removeFav.visibility = View.VISIBLE
@@ -85,7 +86,7 @@ class PlayerAdapter : RecyclerView.Adapter<PlayerAdapter.ViewHolder>() {
             }
 
             removeFav.setOnClickListener {
-                val removedPlayer = Players(playerName[viewholder.adapterPosition], playerImage[viewholder.adapterPosition])
+                val removedPlayer = Players(playerName[viewholder.adapterPosition], playerImage[viewholder.adapterPosition], playerTeamImage[viewholder.adapterPosition])
 
                 removeFav.visibility = View.GONE
                 favbtn.visibility = View.VISIBLE

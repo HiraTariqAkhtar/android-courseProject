@@ -19,11 +19,23 @@ class Favourites : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_favourites)
 
-        val rv = findViewById<RecyclerView>(R.id.rv_fav_match)
-        rv.layoutManager = LinearLayoutManager(this)
-        val data = MatchAdapter().fav_match_list
-        val adapter = FavMatchAdapter(data)
-        rv.adapter = adapter
+        val match_rv = findViewById<RecyclerView>(R.id.rv_fav_match)
+        match_rv.layoutManager = LinearLayoutManager(this)
+        val match_data = MatchAdapter().fav_match_list
+        val match_adapter = FavMatchAdapter(match_data)
+        match_rv.adapter = match_adapter
+
+        val player_rv = findViewById<RecyclerView>(R.id.rv_fav_player)
+        player_rv.layoutManager = LinearLayoutManager(this)
+        val player_data = PlayerAdapter().fav_player_list
+        val player_adapter = FavPlayerAdapter(player_data)
+        player_rv.adapter = player_adapter
+
+        val country_rv = findViewById<RecyclerView>(R.id.rv_fav_country)
+        country_rv.layoutManager = LinearLayoutManager(this)
+        val country_data = CountryAdapter().fav_country_list
+        val country_adapter = FavCountryAdapter(country_data)
+        country_rv.adapter = country_adapter
 
 
         val favIcon = findViewById<ImageView>(R.id.FavIcon)
