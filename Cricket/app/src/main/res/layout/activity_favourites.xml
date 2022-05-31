@@ -41,6 +41,7 @@
             android:layout_height="150dp">
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_fav_match"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
@@ -71,6 +72,7 @@
             android:layout_height="150dp">
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_fav_player"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
@@ -101,6 +103,7 @@
             android:id="@+id/countryList">
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_fav_country"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 

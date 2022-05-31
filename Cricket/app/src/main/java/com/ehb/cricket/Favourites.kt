@@ -5,19 +5,26 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.ehb.cricket.adapters.*
 import com.ehb.cricket.classes.Countries
 import com.ehb.cricket.classes.Matches
 import com.ehb.cricket.classes.Players
+import java.util.ArrayList
 
 class Favourites : AppCompatActivity() {
-
-    val matchList = mutableListOf<Matches>()
-    val playerList = mutableListOf<Players>()
-    val countryList = mutableListOf<Countries>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_favourites)
+
+        val rv = findViewById<RecyclerView>(R.id.rv_fav_match)
+        rv.layoutManager = LinearLayoutManager(this)
+        val data = MatchAdapter().fav_match_list
+        val adapter = FavMatchAdapter(data)
+        rv.adapter = adapter
+
 
         val favIcon = findViewById<ImageView>(R.id.FavIcon)
         favIcon.setOnClickListener {
@@ -30,4 +37,5 @@ class Favourites : AppCompatActivity() {
             startActivity(intent)
         }
     }
+
 }

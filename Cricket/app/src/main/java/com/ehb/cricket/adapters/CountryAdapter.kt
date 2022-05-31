@@ -7,14 +7,18 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.ehb.cricket.Favourites
 import com.ehb.cricket.R
 import com.ehb.cricket.classes.Countries
+import com.ehb.cricket.classes.Matches
 import com.ehb.cricket.classes.Players
 
 class CountryAdapter  : RecyclerView.Adapter<CountryAdapter.ViewHolder>() {
+    val fav_country_list = arrayListOf<Countries>()
+
     private var countryName = arrayOf("Pakistan", "India","Australia", "England","West Indies","Bangladesh")
     private var countryFlag = arrayOf(R.drawable.pak_flag, R.drawable.in_flag, R.drawable.aus_flag, R.drawable.eng_flag, R.drawable.wi_flag, R.drawable.ban_flag)
     private var countryImage = arrayOf(R.drawable.pakistan, R.drawable.india, R.drawable.australia, R.drawable.england, R.drawable.west_indies, R.drawable.bangladesh)
@@ -69,18 +73,20 @@ class CountryAdapter  : RecyclerView.Adapter<CountryAdapter.ViewHolder>() {
 
             favbtn.setOnClickListener {
                 val addedCountry = Countries(countryName[vh.adapterPosition], countryImage[vh.adapterPosition])
-                favPage.countryList.add(addedCountry)
+                fav_country_list.add(addedCountry)
 
                 favbtn.visibility = View.GONE
                 removeFav.visibility = View.VISIBLE
+
             }
 
             removeFav.setOnClickListener {
                 val removedCountry = Countries(countryName[vh.adapterPosition], countryImage[vh.adapterPosition])
-                favPage.countryList.remove(removedCountry)
 
                 removeFav.visibility = View.GONE
                 favbtn.visibility = View.VISIBLE
+
+
             }
 
             details.show()

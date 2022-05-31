@@ -17,6 +17,7 @@ import com.ehb.cricket.classes.Matches
 import com.ehb.cricket.classes.Players
 
 class MatchAdapter : RecyclerView.Adapter<MatchAdapter.ViewHolder>() {
+    val fav_match_list = arrayListOf<Matches>(Matches("gug", R.drawable.cricket, R.drawable.india), Matches("azertyu", R.drawable.shadab, R.drawable.pakistan))
 
    private var matchName = arrayOf("PAK vs IND", "PAK vs BAN","AUS vs PAK", "PAK vs ENG","WI vs PAK","PAK vs IND", "PAK vs BAN","AUS vs PAK", "PAK vs ENG","WI vs PAK")
    private var imgTeam1 = arrayOf(R.drawable.pakistan, R.drawable.pakistan, R.drawable.australia, R.drawable.pakistan,R.drawable.west_indies,R.drawable.pakistan, R.drawable.pakistan, R.drawable.australia, R.drawable.pakistan,R.drawable.west_indies)
@@ -60,8 +61,8 @@ class MatchAdapter : RecyclerView.Adapter<MatchAdapter.ViewHolder>() {
             }
 
             favbtn.setOnClickListener {
-                val addMatch = Matches(matchName[viewholder.adapterPosition])
-                favPage.matchList.add(addMatch)
+                val addMatch = Matches(matchName[viewholder.adapterPosition],imgTeam1[viewholder.adapterPosition],imgTeam2[viewholder.adapterPosition])
+                fav_match_list.add(addMatch)
 
                 favbtn.visibility = View.GONE
                 removeFav.visibility = View.VISIBLE
@@ -70,8 +71,8 @@ class MatchAdapter : RecyclerView.Adapter<MatchAdapter.ViewHolder>() {
             }
 
             removeFav.setOnClickListener {
-                val removeMatch = Matches(matchName[viewholder.adapterPosition])
-                favPage.matchList.remove(removeMatch)
+                val removeMatch = Matches(matchName[viewholder.adapterPosition], imgTeam1[viewholder.adapterPosition], imgTeam2[viewholder.adapterPosition])
+                fav_match_list.remove(removeMatch)
 
                 removeFav.visibility = View.GONE
                 favbtn.visibility = View.VISIBLE
