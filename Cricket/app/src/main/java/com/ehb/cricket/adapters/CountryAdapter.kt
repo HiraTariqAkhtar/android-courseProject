@@ -51,6 +51,8 @@ class CountryAdapter  : RecyclerView.Adapter<CountryAdapter.ViewHolder>() {
 
             val backbtn = details.findViewById<Button>(R.id.backBtn)
             val favbtn = details.findViewById<Button>(R.id.addToFav)
+            val removeFav = details.findViewById<TextView>(R.id.removeFav)
+            removeFav.visibility = View.GONE
             val favPage = Favourites()
 
             teamImg.setImageResource(countryImage[vh.adapterPosition])
@@ -69,6 +71,17 @@ class CountryAdapter  : RecyclerView.Adapter<CountryAdapter.ViewHolder>() {
             favbtn.setOnClickListener {
                 val addedCountry = Countries(countryName[vh.adapterPosition], countryImage[vh.adapterPosition])
                 favPage.countryList.add(addedCountry)
+
+                favbtn.visibility = View.GONE
+                removeFav.visibility = View.VISIBLE
+            }
+
+            removeFav.setOnClickListener {
+                val removedCountry = Countries(countryName[vh.adapterPosition], countryImage[vh.adapterPosition])
+                favPage.countryList.remove(removedCountry)
+
+                removeFav.visibility = View.GONE
+                favbtn.visibility = View.VISIBLE
             }
 
             details.show()

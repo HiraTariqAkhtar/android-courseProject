@@ -11,6 +11,7 @@ import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.ehb.cricket.Favourites
 import com.ehb.cricket.R
+import com.ehb.cricket.classes.Countries
 import com.ehb.cricket.classes.Matches
 import com.ehb.cricket.classes.Players
 
@@ -43,6 +44,8 @@ class MatchAdapter : RecyclerView.Adapter<MatchAdapter.ViewHolder>() {
 
             val backbtn = detailPage.findViewById<Button>(R.id.backBtn)
             val favbtn = detailPage.findViewById<Button>(R.id.addToFav)
+            val removeFav = detailPage.findViewById<TextView>(R.id.removeFav)
+            removeFav.visibility = View.GONE
             val favPage = Favourites()
 
             team1.setImageResource(imgTeam1[viewholder.adapterPosition])
@@ -59,6 +62,17 @@ class MatchAdapter : RecyclerView.Adapter<MatchAdapter.ViewHolder>() {
             favbtn.setOnClickListener {
                 val addMatch = Matches(matchName[viewholder.adapterPosition],matchType[viewholder.adapterPosition],matchDateAndTime[viewholder.adapterPosition], venue[viewholder.adapterPosition])
                 favPage.matchList.add(addMatch)
+
+                favbtn.visibility = View.GONE
+                removeFav.visibility = View.VISIBLE
+            }
+
+            removeFav.setOnClickListener {
+                val removeMatch = Matches(matchName[viewholder.adapterPosition],matchType[viewholder.adapterPosition],matchDateAndTime[viewholder.adapterPosition], venue[viewholder.adapterPosition])
+                favPage.matchList.remove(removeMatch)
+
+                removeFav.visibility = View.GONE
+                favbtn.visibility = View.VISIBLE
             }
 
             detailPage.show()

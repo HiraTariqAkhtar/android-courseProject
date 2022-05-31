@@ -18,6 +18,7 @@ import com.ehb.cricket.Favourites
 import com.ehb.cricket.Player
 import com.ehb.cricket.PlayerDetail
 import com.ehb.cricket.R
+import com.ehb.cricket.classes.Matches
 import com.ehb.cricket.classes.Players
 
 class PlayerAdapter : RecyclerView.Adapter<PlayerAdapter.ViewHolder>() {
@@ -56,6 +57,8 @@ class PlayerAdapter : RecyclerView.Adapter<PlayerAdapter.ViewHolder>() {
 
             val backbtn = nextPage.findViewById<Button>(R.id.backBtn)
             val favbtn = nextPage.findViewById<Button>(R.id.addToFav)
+            val removeFav = nextPage.findViewById<TextView>(R.id.removeFav)
+            removeFav.visibility = View.GONE
             val favPage = Favourites()
 
             // show correct details in dialog
@@ -77,7 +80,18 @@ class PlayerAdapter : RecyclerView.Adapter<PlayerAdapter.ViewHolder>() {
                 val addedPlayer = Players(playerName[viewholder.adapterPosition], playerImage[viewholder.adapterPosition])
                 favPage.playerList.add(addedPlayer)
 
+                favbtn.visibility = View.GONE
+                removeFav.visibility = View.VISIBLE
+
             //  Toast.makeText(parent.context, favPage.playerList.toString(), Toast.LENGTH_SHORT).show()
+            }
+
+            removeFav.setOnClickListener {
+                val removedPlayer = Players(playerName[viewholder.adapterPosition], playerImage[viewholder.adapterPosition])
+                favPage.playerList.add(removedPlayer)
+
+                removeFav.visibility = View.GONE
+                favbtn.visibility = View.VISIBLE
             }
 
             nextPage.show()
