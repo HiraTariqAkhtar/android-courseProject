@@ -1,5 +1,6 @@
 package com.ehb.cricket.adapters
 
+import android.annotation.SuppressLint
 import android.app.Dialog
 import android.content.Intent
 import android.util.Log
@@ -18,6 +19,7 @@ import com.ehb.cricket.Favourites
 import com.ehb.cricket.Player
 import com.ehb.cricket.PlayerDetail
 import com.ehb.cricket.R
+import com.ehb.cricket.SQLite_database.Database
 import com.ehb.cricket.classes.Matches
 import com.ehb.cricket.classes.Players
 
@@ -36,6 +38,7 @@ class PlayerAdapter : RecyclerView.Adapter<PlayerAdapter.ViewHolder>() {
     private var playerBatStyle = arrayOf("Right handed bat", "Right handed bat","Right handed bat", "Right handed bat","Right handed bat", "Right handed bat","Right handed bat", "Right handed bat","Right handed bat", "Right handed bat")
     private var playerBowlStyle = arrayOf("Right-arm legbreak", "Right-arm medium","Right-arm legbreak", "Right-arm medium","Right-arm legbreak", "Right-arm medium","Right-arm legbreak", "Right-arm medium","Right-arm legbreak", "Right-arm medium")
 
+    @SuppressLint("Range")
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PlayerAdapter.ViewHolder {
         val v = LayoutInflater.from(parent.context).inflate(R.layout.card_layout, parent, false)
         val viewholder = ViewHolder(v)
@@ -82,6 +85,16 @@ class PlayerAdapter : RecyclerView.Adapter<PlayerAdapter.ViewHolder>() {
 
                 favbtn.visibility = View.GONE
                 removeFav.visibility = View.VISIBLE
+
+                // below we have created
+                // a new Database class,
+                // and passed context to it
+                val db = Database(parent.context, null)
+
+                // calling method to add
+                // name to our database
+                db.addFav(playerName[viewholder.adapterPosition], playerImage[viewholder.adapterPosition], playerTeamImage[viewholder.adapterPosition])
+
 
             //  Toast.makeText(parent.context, favPage.playerList.toString(), Toast.LENGTH_SHORT).show()
             }

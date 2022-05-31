@@ -1,6 +1,6 @@
 package com.ehb.cricket.classes
 
-data class Players(
+class Favorites (
     val name: String,
     val img: Int,
     val img2:Int

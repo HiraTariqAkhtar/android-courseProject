@@ -7,33 +7,31 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.ehb.cricket.R
-import com.ehb.cricket.classes.Countries
-import com.ehb.cricket.classes.Matches
-import com.ehb.cricket.classes.Players
+import com.ehb.cricket.classes.Favorites
 
-class FavPlayerAdapter(val playerList: List<Players>): RecyclerView.Adapter<FavPlayerAdapter.ViewHolder>()  {
+class FavAdapter(val fav: List<Favorites>): RecyclerView.Adapter<FavAdapter.ViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FavPlayerAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FavAdapter.ViewHolder {
         val v = LayoutInflater.from(parent.context).inflate(R.layout.fav_card_layout, parent, false)
         return ViewHolder(v)
     }
 
     override fun getItemCount(): Int {
-        return playerList.size
+        return fav.size
     }
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val list = playerList[position]
+    override fun onBindViewHolder(holder: FavAdapter.ViewHolder, position: Int) {
+        val list = fav[position]
 
         holder.name.text = list.name
         holder.img.setImageResource(list.img)
         holder.img2.setImageResource(list.img2)
     }
 
+
     inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         var name : TextView = itemView.findViewById(R.id.tv_name)
         var img : ImageView = itemView.findViewById(R.id.iv_img)
         var img2 : ImageView = itemView.findViewById(R.id.iv_img2)
     }
-
 }
