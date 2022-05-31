@@ -33,5 +33,6 @@
     <string name="t20" translatable="false">T20:</string>
     <string name="first_matches">First matches</string>
     <string name="already_in_fav">You are already in favourites page</string>
+    <string name="remove_favourite">Remove favourite</string>
 
 </resources>
