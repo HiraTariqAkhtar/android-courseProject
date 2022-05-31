@@ -58,7 +58,6 @@ class PlayerAdapter : RecyclerView.Adapter<PlayerAdapter.ViewHolder>() {
             val backbtn = nextPage.findViewById<Button>(R.id.backBtn)
             val favbtn = nextPage.findViewById<Button>(R.id.addToFav)
             val removeFav = nextPage.findViewById<TextView>(R.id.removeFav)
-            removeFav.visibility = View.GONE
             val favPage = Favourites()
 
             // show correct details in dialog

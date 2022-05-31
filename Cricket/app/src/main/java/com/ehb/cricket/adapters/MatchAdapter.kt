@@ -46,7 +46,6 @@ class MatchAdapter : RecyclerView.Adapter<MatchAdapter.ViewHolder>() {
             val backbtn = detailPage.findViewById<Button>(R.id.backBtn)
             val favbtn = detailPage.findViewById<Button>(R.id.addToFav)
             val removeFav = detailPage.findViewById<TextView>(R.id.removeFav)
-            removeFav.visibility = View.GONE
             val favPage = Favourites()
 
             team1.setImageResource(imgTeam1[viewholder.adapterPosition])
