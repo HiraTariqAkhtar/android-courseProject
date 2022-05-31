@@ -78,6 +78,7 @@ class PlayerAdapter : RecyclerView.Adapter<PlayerAdapter.ViewHolder>() {
 
             favbtn.setOnClickListener {
                 val addedPlayer = Players(playerName[viewholder.adapterPosition], playerImage[viewholder.adapterPosition], playerTeamImage[viewholder.adapterPosition])
+                fav_player_list.add(addedPlayer)
 
                 favbtn.visibility = View.GONE
                 removeFav.visibility = View.VISIBLE
@@ -87,6 +88,7 @@ class PlayerAdapter : RecyclerView.Adapter<PlayerAdapter.ViewHolder>() {
 
             removeFav.setOnClickListener {
                 val removedPlayer = Players(playerName[viewholder.adapterPosition], playerImage[viewholder.adapterPosition], playerTeamImage[viewholder.adapterPosition])
+                fav_player_list.remove(removedPlayer)
 
                 removeFav.visibility = View.GONE
                 favbtn.visibility = View.VISIBLE

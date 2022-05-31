@@ -82,6 +82,7 @@ class CountryAdapter  : RecyclerView.Adapter<CountryAdapter.ViewHolder>() {
 
             removeFav.setOnClickListener {
                 val removedCountry = Countries(countryName[vh.adapterPosition], countryImage[vh.adapterPosition], countryFlag[vh.adapterPosition])
+                fav_country_list.remove(removedCountry)
 
                 removeFav.visibility = View.GONE
                 favbtn.visibility = View.VISIBLE
