@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.ehb.cricket.Favourites
@@ -65,6 +66,8 @@ class MatchAdapter : RecyclerView.Adapter<MatchAdapter.ViewHolder>() {
 
                 favbtn.visibility = View.GONE
                 removeFav.visibility = View.VISIBLE
+
+//                Toast.makeText(parent.context, favPage.matchList.toString(), Toast.LENGTH_SHORT).show()
             }
 
             removeFav.setOnClickListener {
@@ -73,7 +76,11 @@ class MatchAdapter : RecyclerView.Adapter<MatchAdapter.ViewHolder>() {
 
                 removeFav.visibility = View.GONE
                 favbtn.visibility = View.VISIBLE
+
+//                Toast.makeText(parent.context, favPage.matchList.toString(), Toast.LENGTH_SHORT).show()
             }
+            
+
 
             detailPage.show()
         }
