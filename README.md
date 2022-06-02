@@ -2,7 +2,7 @@
 
 ## RESOURCES
 
-#### Add different content in eacht tab 
+#### Add different content in each tab 
 https://www.youtube.com/watch?v=KnAmhgAUva8&ab_channel=CodeDocuDeveloperC%23AspNetAngular
 
 
@@ -51,6 +51,8 @@ Ben Stokes: https://www.cricbuzz.com/profiles/6557/ben-stokes
 
 Tamim Iqbal: https://www.cricbuzz.com/profiles/612/tamim-iqbal
 
+Shaheen Shah Afridi: https://www.cricbuzz.com/profiles/12160/shaheen-afridi
+
 ##### Country national teams
 Pakistan national cricket team: https://en.wikipedia.org/wiki/Pakistan_national_cricket_team
 
@@ -63,6 +65,9 @@ England national cricket team: https://en.wikipedia.org/wiki/England_cricket_tea
 West-Indies national cricket team: https://en.wikipedia.org/wiki/West_Indies_cricket_team
 
 Bangladesh national cricket team: https://en.wikipedia.org/wiki/Bangladesh_national_cricket_team
+
+##### Images
+Google Images
 
 #### use SQLite database
 https://www.geeksforgeeks.org/android-sqlite-database-in-kotlin/
